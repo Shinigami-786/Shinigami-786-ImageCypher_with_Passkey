@@ -34,3 +34,82 @@ While messaging apps like WhatsApp offer end-to-end encryption for messages and 
 
 ## 📂 Project Structure
 
+/backend ├── encrypt.js └── decrypt.js
+
+/frontend └── src/ ├── components/ └── App.js └── styles/
+
+/uploads └── (encrypted images, keys, hashes)
+
+README.md package.json
+
+---
+
+## ⚙️ How it Works
+
+### Encryption
+
+- Upload an image.
+- A random key (same size as image data) is generated.
+- Image is encrypted with XOR cipher.
+- Key is Base64-encoded and saved.
+- SHA-256 hash of key is generated and saved.
+
+### Decryption
+
+- Encrypted image and key are uploaded.
+- SHA-256 hash is recomputed from the key.
+- Hash is compared with the stored hash.
+- If matched, image is decrypted.
+- Hash file is deleted after successful decryption.
+
+---
+
+## 📦 Installation
+
+Follow the steps below to set up and run `imageCypher` locally:
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/imageCypher.git
+   cd imageCypher
+   ```
+
+2. Install backend dependencies
+   ```bash
+   cd backend
+   npm install
+   ```
+   
+3. Install frontend dependencies
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+
+---
+
+## 🚀 Usage
+
+- Start backend server.
+- Start frontend React app.
+- Use drag-and-drop UI to encrypt or decrypt images.
+- Download encrypted files, key, and hash as ZIP.
+- Share encrypted image and key separately.
+
+---
+
+## 🛡️ Security Note
+
+This tool provides **application-level encryption and integrity checking**.  
+While XOR cipher is simple, combining it with proper key management and hash verification significantly improves the safety of image sharing.
+
+---
+
+## ⭐️ Support
+
+If you like this project, give it a ⭐️ and consider contributing!
+"""
+
+
+
