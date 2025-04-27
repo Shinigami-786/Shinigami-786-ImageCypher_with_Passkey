@@ -109,7 +109,7 @@ While XOR cipher is simple, combining it with proper key management and hash ver
 ## ⭐️ Support
 
 If you like this project, give it a ⭐️ and consider contributing!
-"""
+
 
 
 
